@@ -77,22 +77,14 @@ export default function Hero() {
 						improving my skills through practical projects.
 					</motion.p>
 
-					{/* Buttons */}
-<motion.div
-	variants={fadeUp}
-	className="mt-9 flex flex-col gap-4 sm:flex-row">
-	<Button
-		variant="primary"
-		onClick={scrollToProjects}>
-		View My Projects
-	</Button>
+					<Button variant="primary" onClick={scrollToProjects}>
+						View My Projects
+					</Button>
 
-	<Button
-		variant="secondary"
-		onClick={scrollToContact}>
-		Contact Me
-	</Button>
-</motion.div>
+					<Button variant="secondary" onClick={scrollToContact}>
+						Contact Me
+					</Button>
+				</motion.div>
 
 				{/* Visual */}
 				<motion.div
