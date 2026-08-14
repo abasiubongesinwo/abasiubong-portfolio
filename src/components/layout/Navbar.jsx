@@ -30,7 +30,7 @@ export default function Navbar() {
 	};
 
 	return (
-		<header className="sticky top-0 z-50 border-b border-white/10 bg-[#050505]/80 backdrop-blur-xl">
+		<header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-[#050505]/80 backdrop-blur-xl">
 			<nav className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-5 md:px-8">
 				{/* Logo */}
 				<button
@@ -88,7 +88,6 @@ export default function Navbar() {
 					:	<Menu size={20} />}
 				</button>
 			</nav>
-
 			{/* Mobile navigation */}
 			{isOpen && (
 				<div className="border-t border-white/10 bg-[#050505]/95 px-5 py-5 backdrop-blur-xl md:hidden">

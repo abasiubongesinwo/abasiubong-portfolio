@@ -71,19 +71,23 @@ export default function Hero() {
 
 					<motion.p
 						variants={fadeUp}
-						className="mt-6 max-w-2xl text-base leading-8 text-slate-400 sm:text-lg">
+						className="my-6 max-w-2xl text-base leading-8 text-slate-400 sm:text-lg">
 						I'm an aspiring web developer currently learning frontend and
 						full-stack development. I enjoy building responsive websites and
 						improving my skills through practical projects.
 					</motion.p>
 
-					<Button variant="primary" onClick={scrollToProjects}>
-						View My Projects
-					</Button>
+					<motion.div
+						variants={fadeUp}
+						className="mt-9 flex flex-col gap-4 sm:flex-row">
+						<Button variant="primary" onClick={scrollToProjects}>
+							View My Projects
+						</Button>
 
-					<Button variant="secondary" onClick={scrollToContact}>
-						Contact Me
-					</Button>
+						<Button variant="secondary" onClick={scrollToContact}>
+							Contact Me
+						</Button>
+					</motion.div>
 				</motion.div>
 
 				{/* Visual */}
