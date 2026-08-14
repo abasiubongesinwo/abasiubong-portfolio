@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+:root {
+	color-scheme: dark;
+	font-family:
+		Inter,
+		system-ui,
+		-apple-system,
+		BlinkMacSystemFont,
+		"Segoe UI",
+		sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: #0d1117;
+	color: #cbd5e1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.shadow-glow {
+	box-shadow: 0 20px 60px rgba(14, 165, 233, 0.18);
+}
+
+.hero-glow {
+	background: radial-gradient(
+		circle at top,
+		rgba(14, 165, 233, 0.15),
+		transparent 35%
+	);
+}
+
+* {
+	scrollbar-width: thin;
+	scrollbar-color: rgba(14, 165, 233, 0.3) transparent;
+}
+
+*::-webkit-scrollbar {
+	width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+	background: rgba(14, 165, 233, 0.35);
+	border-radius: 9999px;
+}
+
+#root {
+	min-height: 100vh;
+}
+
+button,
+input,
+textarea,
+a {
+	font: inherit;
+}
+
+section {
+	scroll-margin-top: 96px;
+}
