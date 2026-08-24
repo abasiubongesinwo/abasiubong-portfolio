@@ -106,7 +106,7 @@ export default function Hero() {
 						{/* Center */}
 						<div className="flex h-48 w-48 items-center justify-center overflow-hidden rounded-full border border-sky-400/20 bg-slate-900/80 shadow-[0_0_80px_rgba(14,165,233,0.15)] backdrop-blur-xl">
 							<img
-								src="/profile.jpg"
+								src="/profile.png"
 								alt="Abasiubong Esinwo"
 								className="h-full w-full object-cover"
 							/>
