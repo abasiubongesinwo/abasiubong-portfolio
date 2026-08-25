@@ -92,32 +92,94 @@ export default function Hero() {
 
 				{/* Visual */}
 				<motion.div
-					initial={{ opacity: 0, scale: 0.9 }}
-					animate={{ opacity: 1, scale: 1 }}
-					transition={{ duration: 0.8, delay: 0.25 }}
-					className="hidden lg:flex justify-center">
-					<div className="relative flex h-80 w-80 items-center justify-center">
-						{/* Outer ring */}
-						<div className="absolute inset-0 rounded-full border border-sky-400/20" />
+					initial={{ opacity: 0, x: 40, scale: 0.9 }}
+					animate={{ opacity: 1, x: 0, scale: 1 }}
+					transition={{ duration: 0.9, delay: 0.25 }}
+					className="hidden lg:flex items-center justify-center">
+					<div className="relative flex h-[420px] w-[420px] items-center justify-center">
+						{/* Soft background glow */}
+						<div className="absolute h-72 w-72 rounded-full bg-sky-500/20 blur-[100px]" />
 
-						{/* Middle ring */}
-						<div className="absolute inset-8 rounded-full border border-sky-400/10" />
+						{/* Outer decorative ring */}
+						<motion.div
+							animate={{ rotate: 360 }}
+							transition={{
+								duration: 25,
+								repeat: Infinity,
+								ease: "linear",
+							}}
+							className="absolute inset-4 rounded-full border border-sky-400/20"
+						/>
 
-						{/* Center */}
-						<div className="flex h-48 w-48 items-center justify-center overflow-hidden rounded-full border border-sky-400/20 bg-slate-900/80 shadow-[0_0_80px_rgba(14,165,233,0.15)] backdrop-blur-xl">
-							<img
-								src="/profile.png"
-								alt="Abasiubong Esinwo"
-								className="h-full w-full object-cover"
-							/>
+						{/* Dashed orbit */}
+						<motion.div
+							animate={{ rotate: -360 }}
+							transition={{
+								duration: 18,
+								repeat: Infinity,
+								ease: "linear",
+							}}
+							className="absolute inset-12 rounded-full border border-dashed border-sky-400/20"
+						/>
+
+						{/* Main image container */}
+						<div className="relative h-64 w-64">
+							{/* Gradient border */}
+							<div className="absolute -inset-[3px] rounded-full bg-gradient-to-br from-sky-400 via-cyan-400 to-blue-600 opacity-80 blur-[1px]" />
+
+							{/* Image */}
+							<div className="relative h-full w-full overflow-hidden rounded-full border-4 border-slate-950 bg-slate-900 shadow-[0_0_70px_rgba(14,165,233,0.25)]">
+								<img
+									src="/profile.png"
+									alt="Abasiubong Esinwo"
+									className="h-full w-full object-cover object-top grayscale-[15%] transition duration-700 hover:scale-105"
+								/>
+
+								{/* Image overlay */}
+								<div className="pointer-events-none absolute inset-0 rounded-full bg-gradient-to-t from-slate-950/30 via-transparent to-transparent" />
+							</div>
+
+							{/* Status indicator */}
+							<div className="absolute bottom-5 right-3 flex h-7 w-7 items-center justify-center rounded-full border-4 border-slate-950 bg-emerald-400">
+								<div className="h-2 w-2 rounded-full bg-white" />
+							</div>
 						</div>
 
-						{/* Floating dots */}
-						<span className="absolute left-8 top-20 h-3 w-3 rounded-full bg-sky-400 shadow-[0_0_20px_rgba(56,189,248,0.8)]" />
+						{/* Floating top badge */}
+						<motion.div
+							animate={{ y: [0, -8, 0] }}
+							transition={{
+								duration: 4,
+								repeat: Infinity,
+								ease: "easeInOut",
+							}}
+							className="absolute right-0 top-16 rounded-xl border border-sky-400/20 bg-slate-900/80 px-4 py-2 shadow-xl backdrop-blur-md">
+							<p className="text-xs font-medium text-sky-400">
+								Full-Stack Developer
+							</p>
+						</motion.div>
 
-						<span className="absolute bottom-16 right-5 h-2 w-2 rounded-full bg-blue-400 shadow-[0_0_16px_rgba(96,165,250,0.8)]" />
+						{/* Floating bottom badge */}
+						<motion.div
+							animate={{ y: [0, 8, 0] }}
+							transition={{
+								duration: 4.5,
+								repeat: Infinity,
+								ease: "easeInOut",
+							}}
+							className="absolute bottom-14 left-0 rounded-xl border border-slate-700/70 bg-slate-900/80 px-4 py-2 shadow-xl backdrop-blur-md">
+							<p className="text-xs text-slate-400">
+								<span className="mr-2 text-emerald-400">●</span>
+								Available to learn & build
+							</p>
+						</motion.div>
 
-						<span className="absolute right-16 top-8 h-2 w-2 rounded-full bg-cyan-300 shadow-[0_0_16px_rgba(103,232,249,0.8)]" />
+						{/* Orbit dots */}
+						<span className="absolute left-10 top-20 h-3 w-3 rounded-full bg-sky-400 shadow-[0_0_25px_rgba(56,189,248,0.9)]" />
+
+						<span className="absolute right-14 top-10 h-2 w-2 rounded-full bg-cyan-300 shadow-[0_0_18px_rgba(103,232,249,0.9)]" />
+
+						<span className="absolute bottom-20 right-7 h-2.5 w-2.5 rounded-full bg-blue-400 shadow-[0_0_20px_rgba(96,165,250,0.9)]" />
 					</div>
 				</motion.div>
 			</div>
