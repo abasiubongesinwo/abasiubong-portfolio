@@ -12,19 +12,12 @@ const projects = [
 		featured: true,
 	},
 	{
-		title: "Payment Page",
+		title: "UB Todo List",
 		description:
-			"A responsive payment interface created to practice frontend layout, styling, and user interface development.",
-		technologies: ["HTML", "CSS", "JavaScript"],
-		githubUrl: "https://github.com/abasiubongesinwo",
-		featured: false,
-	},
-	{
-		title: "Welcome Email System",
-		description:
-			"A welcome email feature created with frontend and backend functionality as part of a web project.",
-		technologies: ["HTML", "CSS", "JavaScript", "Node.js"],
-		githubUrl: "https://github.com/abasiubongesinwo",
+			"A responsive task management application built to organize daily tasks efficiently with a clean and modern user interface.",
+		technologies: ["React", "JavaScript", "Tailwind CSS"],
+		liveUrl: "https://abasiubong-todo-app.vercel.app/",
+		githubUrl: "https://github.com/abasiubongesinwo/todo-list",
 		featured: false,
 	},
 ];
