@@ -9,15 +9,17 @@ const projects = [
 		technologies: ["React", "JavaScript", "Tailwind CSS", "React Icons"],
 		liveUrl: "https://ubrestaurant.vercel.app",
 		githubUrl: "https://github.com/abasiubongesinwo",
+		imageUrl: "/restaurant.png",
 		featured: true,
 	},
 	{
-		title: "UB Todo List",
+		title: "Abasiubong Todo app",
 		description:
 			"A responsive task management application built to organize daily tasks efficiently with a clean and modern user interface.",
 		technologies: ["React", "JavaScript", "Tailwind CSS"],
 		liveUrl: "https://abasiubong-todo-app.vercel.app/",
 		githubUrl: "https://github.com/abasiubongesinwo/todo-list",
+		imageUrl: "/todo.png",
 		featured: false,
 	},
 ];
@@ -69,17 +71,29 @@ export default function Projects() {
 				initial="hidden"
 				whileInView="visible"
 				viewport={{ once: true, amount: 0.1 }}
-				className="grid gap-6 lg:grid-cols-2">
+				className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 				{projects.map((project, index) => (
 					<motion.article
 						key={project.title}
 						variants={item}
-						className={`group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-6 transition-all duration-500 hover:-translate-y-1 hover:border-sky-400/30 hover:bg-white/[0.05] ${
-							project.featured ? "lg:col-span-2" : ""
-						}`}>
+						className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-6 transition-all duration-500 hover:-translate-y-1 hover:border-sky-400/30 hover:bg-white/[0.05]">
 						<div className="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-sky-500/10 blur-3xl transition-all duration-500 group-hover:bg-sky-500/20" />
 
-						<div className="relative z-10">
+						<div className="relative z-10 flex h-full flex-col">
+							{/* PROJECT IMAGE CONTAINER SLOT */}
+							<div className="relative mb-6 h-48 w-full overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02]">
+								{project.imageUrl ?
+									<img
+										src={project.imageUrl}
+										alt={project.title}
+										className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+									/>
+								:	<div className="flex h-full w-full items-center justify-center text-xs text-slate-600">
+										Project Screenshot Slot
+									</div>
+								}
+							</div>
+
 							<div className="flex items-start justify-between gap-5">
 								<div>
 									{project.featured && (
@@ -96,7 +110,7 @@ export default function Projects() {
 								<span className="text-sm text-slate-600">0{index + 1}</span>
 							</div>
 
-							<p className="mt-5 max-w-3xl leading-7 text-slate-400">
+							<p className="mt-5 leading-7 text-slate-400">
 								{project.description}
 							</p>
 
@@ -110,7 +124,7 @@ export default function Projects() {
 								))}
 							</div>
 
-							<div className="mt-8 flex flex-wrap gap-3">
+							<div className="mt-auto flex flex-wrap gap-3 pt-8">
 								{project.liveUrl && (
 									<a
 										href={project.liveUrl}
