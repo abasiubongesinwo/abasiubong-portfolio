@@ -6,14 +6,21 @@ const projects = [
 		title: "UB Restaurant",
 		description:
 			"A responsive restaurant website built as a practical web development project. It includes a modern interface, responsive layouts, and interactive sections.",
-		technologies: ["React", "JavaScript", "Tailwind CSS", "React Icons"],
+		technologies: [
+			"React",
+			"JavaScript",
+			"Tailwind CSS",
+			"Node JS",
+			"Express",
+			"Mongoss",
+		],
 		liveUrl: "https://ubrestaurant.vercel.app",
 		githubUrl: "https://github.com/abasiubongesinwo",
 		imageUrl: "/restaurant.png",
 		featured: true,
 	},
 	{
-		title: "Abasiubong Todo app",
+		title: "Abasiubong Todo App",
 		description:
 			"A responsive task management application built to organize daily tasks efficiently with a clean and modern user interface.",
 		technologies: ["React", "JavaScript", "Tailwind CSS"],
@@ -110,7 +117,7 @@ export default function Projects() {
 								<span className="text-sm text-slate-600">0{index + 1}</span>
 							</div>
 
-							<p className="mt-5 leading-7 text-slate-400">
+							<p className="mt-5 leading-7 text-slate-400 text-justify">
 								{project.description}
 							</p>
 

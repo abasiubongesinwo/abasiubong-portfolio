@@ -15,6 +15,12 @@ const contactLinks = [
 		icon: Github,
 	},
 	{
+		label: "LinkedIn",
+		value: "linkedin.com/in/abasiubongesinwo/",
+		href: "https://www.linkedin.com/in/abasiubongesinwo/",
+		icon: Linkedin,
+	},
+	{
 		label: "Location",
 		value: "Lagos, Nigeria",
 		href: "#",

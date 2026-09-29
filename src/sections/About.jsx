@@ -48,7 +48,7 @@ export default function About() {
 				{/* Right side */}
 				<motion.div
 					variants={item}
-					className="space-y-5 text-base leading-8 text-slate-400 sm:text-lg">
+					className="space-y-5 text-base leading-8 text-slate-400 sm:text-lg text-justify">
 					<p>
 						I'm Abasiubong Esinwo, an aspiring web developer based in Lagos,
 						Nigeria. I'm currently learning frontend and full-stack web

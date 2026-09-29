@@ -130,7 +130,7 @@ export default function Hero() {
 							{/* Image */}
 							<div className="relative h-full w-full overflow-hidden rounded-full border-4 border-slate-950 bg-slate-900 shadow-[0_0_70px_rgba(14,165,233,0.25)]">
 								<img
-									src="/profile.png"
+									src="/ubphoto.png"
 									alt="Abasiubong Esinwo"
 									className="h-full w-full object-cover object-top grayscale-[15%] transition duration-700 hover:scale-105"
 								/>

@@ -62,7 +62,7 @@ export default function Footer() {
 				<div className="flex flex-col justify-between gap-3 border-t border-white/10 pt-6 text-xs text-slate-600 sm:flex-row">
 					<p>© {year} Abasiubong Esinwo. All rights reserved.</p>
 
-					<p>Built with React, Tailwind CSS & Framer Motion.</p>
+					{/* <p>Built with React, Tailwind CSS & Framer Motion.</p> */}
 				</div>
 			</div>
 		</footer>
