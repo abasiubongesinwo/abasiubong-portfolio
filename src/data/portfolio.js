@@ -7,8 +7,8 @@ export const heroData = {
 	description:
 		"I design premium web experiences with React, Tailwind CSS, and modern backend tech. I help teams ship polished applications that are fast, accessible, and delightful to use.",
 	actions: [
-		{ label: "View Projects", href: "#projects", variant: "primary" },
-		{ label: "Let’s Talk", href: "#contact", variant: "secondary" },
+		{ label: "View Projects", href: "/projects", variant: "primary" },
+		{ label: "Let’s Talk", href: "/contact", variant: "secondary" },
 	],
 };
 
