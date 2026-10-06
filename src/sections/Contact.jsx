@@ -69,11 +69,11 @@ const contactLinks = [
 ];
 
 const opportunities = [
-	"Frontend development",
+	"Fullstack web applications",
 	"Business websites",
 	"Landing pages",
-	"Web applications",
-	"UI implementation",
+	"API integrations",
+	"Database-backed features",
 	"Website redesigns",
 ];
 
@@ -177,10 +177,9 @@ export default function Contact() {
 						</p>
 
 						<p className="mt-5 max-w-2xl text-base leading-8 text-slate-500">
-							I focus on creating responsive, modern, and user-friendly web
-							experiences that look polished, perform well, and work across
-							devices. I can work from an existing design, improve an existing
-							website, or help turn an idea into a complete interface.
+							I build responsive interfaces and connect them to APIs and backend
+							services, working from an existing design, improving an existing
+							website, or shaping a product idea into a usable web experience.
 						</p>
 
 						{/* What I can help with */}
@@ -216,12 +215,17 @@ export default function Contact() {
 								<div className="absolute inset-0 -translate-x-full bg-white/30 transition-transform duration-500 group-hover:translate-x-full" />
 							</a>
 
-							<a
-								href="/projects"
+							<button
+								type="button"
+								onClick={() =>
+									document
+										.getElementById("projects")
+										?.scrollIntoView({ behavior: "smooth", block: "start" })
+								}
 								className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-6 py-3.5 text-sm font-medium text-white transition-all duration-300 hover:-translate-y-1 hover:border-sky-400/30 hover:bg-white/[0.06]">
 								See what I&apos;ve built
 								<ArrowUpRight size={16} />
-							</a>
+							</button>
 						</div>
 					</motion.div>
 

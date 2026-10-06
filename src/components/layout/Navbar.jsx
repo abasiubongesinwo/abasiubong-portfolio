@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { Menu, X, Github, Mail } from "lucide-react";
+import { ArrowUpRight, Menu, X } from "lucide-react";
 
 const navItems = [
 	{ label: "Home", id: "home" },
 	{ label: "About", id: "about" },
-	{ label: "Skills", id: "skills" },
+	{ label: "Services", id: "services" },
 	{ label: "Projects", id: "projects" },
+	{ label: "Stack", id: "stack" },
 	{ label: "Contact", id: "contact" },
 ];
 
@@ -30,7 +31,7 @@ export default function Navbar() {
 	};
 
 	return (
-		<header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-[#050505]/80 backdrop-blur-xl">
+		<header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-[#050816]/85 backdrop-blur-xl">
 			<nav className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-5 md:px-8">
 				{/* Logo */}
 				<button
@@ -58,23 +59,15 @@ export default function Navbar() {
 					))}
 				</div>
 
-				{/* Desktop actions */}
-				<div className="hidden items-center gap-3 md:flex">
-					<a
-						href="https://github.com/abasiubongesinwo"
-						target="_blank"
-						rel="noreferrer"
-						aria-label="GitHub"
-						className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-slate-400 transition-all duration-300 hover:border-sky-400/40 hover:text-sky-400">
-						<Github size={18} />
-					</a>
-
-					<a
-						href="mailto:abasiubongesinwo@gmail.com"
-						aria-label="Email"
-						className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-slate-400 transition-all duration-300 hover:border-sky-400/40 hover:text-sky-400">
-						<Mail size={18} />
-					</a>
+				{/* Primary action */}
+				<div className="hidden md:block">
+					<button
+						type="button"
+						onClick={() => scrollToSection("contact")}
+						className="inline-flex items-center gap-2 rounded-full bg-sky-400 px-4 py-2.5 text-sm font-semibold text-slate-950 transition-all hover:-translate-y-0.5 hover:bg-sky-300">
+						Let's Work
+						<ArrowUpRight size={16} />
+					</button>
 				</div>
 
 				{/* Mobile menu button */}
@@ -102,24 +95,13 @@ export default function Navbar() {
 							</button>
 						))}
 					</div>
-
-					<div className="mt-4 flex gap-3 border-t border-white/10 pt-4">
-						<a
-							href="https://github.com/abasiubongesinwo"
-							target="_blank"
-							rel="noreferrer"
-							className="flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-sm text-slate-400 hover:border-sky-400/40 hover:text-sky-400">
-							<Github size={16} />
-							GitHub
-						</a>
-
-						<a
-							href="mailto:abasiubongesinwo@gmail.com"
-							className="flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-sm text-slate-400 hover:border-sky-400/40 hover:text-sky-400">
-							<Mail size={16} />
-							Email
-						</a>
-					</div>
+					<button
+						type="button"
+						onClick={() => scrollToSection("contact")}
+						className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-sky-400 px-4 py-3 text-sm font-semibold text-slate-950">
+						Let's Work
+						<ArrowUpRight size={16} />
+					</button>
 				</div>
 			)}
 		</header>

@@ -17,9 +17,18 @@ const item = {
 };
 
 const strengths = [
-	{ label: "Frontend engineering", value: "React, modern UI systems, responsive interfaces" },
-	{ label: "Product thinking", value: "Clear UX, clean architecture, business-focused execution" },
-	{ label: "Delivery", value: "Performance, accessibility, maintainable code, API-driven builds" },
+	{
+		label: "Frontend",
+		value: "React, responsive interfaces, and maintainable component systems",
+	},
+	{
+		label: "Backend",
+		value: "Node.js, Express, API-driven features, and MongoDB",
+	},
+	{
+		label: "Product delivery",
+		value: "Usable experiences, clean implementation, and deployment workflows",
+	},
 ];
 
 export default function About() {
@@ -32,21 +41,29 @@ export default function About() {
 				viewport={{ once: true, amount: 0.2 }}
 				className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
 				<motion.div variants={item}>
-					<p className="mb-4 text-sm font-medium uppercase tracking-[0.3em] text-sky-400">About</p>
+					<p className="mb-4 text-sm font-medium uppercase tracking-[0.3em] text-sky-400">
+						About
+					</p>
 					<h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
-						Developer + Problem Solver + Builder.
+						Fullstack engineer. Product-minded builder.
 					</h2>
 				</motion.div>
 
-				<motion.div variants={item} className="space-y-5 text-base leading-8 text-slate-400 sm:text-lg">
+				<motion.div
+					variants={item}
+					className="space-y-5 text-base leading-8 text-slate-400 sm:text-lg">
 					<p>
-						I’m Abasiubong Esinwo, a frontend-focused developer building polished digital experiences that help brands and products stand out online.
+						I’m Abasiubong Esinwo, a Fullstack Engineer building modern web
+						applications and digital experiences from frontend to backend.
 					</p>
 					<p>
-						My work sits at the intersection of design, performance, and product thinking. I build responsive websites and modern web applications that are fast, accessible, and built to solve real user and business needs.
+						I work across responsive UI, server-side functionality, APIs, and
+						database-backed features. That range helps me connect the interface
+						people use with the systems that power it.
 					</p>
 					<p>
-						I focus on clean frontend architecture, maintainable code, and thoughtful interfaces that make products feel premium without sacrificing usability.
+						I focus on clear user experiences, maintainable code, and practical
+						implementation for businesses, startups, and product teams.
 					</p>
 				</motion.div>
 			</motion.div>
@@ -61,9 +78,10 @@ export default function About() {
 					<motion.div
 						key={label}
 						variants={item}
-						className="rounded-2xl border border-slate-800 bg-white/[0.03] p-5"
-					>
-						<p className="text-xs uppercase tracking-[0.2em] text-slate-500">{label}</p>
+						className="rounded-2xl border border-slate-800 bg-white/[0.03] p-5">
+						<p className="text-xs uppercase tracking-[0.2em] text-slate-500">
+							{label}
+						</p>
 						<p className="mt-3 text-base leading-7 text-slate-300">{value}</p>
 					</motion.div>
 				))}

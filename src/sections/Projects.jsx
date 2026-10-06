@@ -4,15 +4,17 @@ import { ExternalLink, Github } from "lucide-react";
 const projects = [
 	{
 		title: "UB Restaurant",
+		purpose:
+			"A restaurant needs a clear, engaging web presence for its menu and brand.",
 		description:
-			"A responsive restaurant website built as a practical web development project. It includes a modern interface, responsive layouts, and interactive sections.",
+			"Designed and developed a responsive restaurant website with a polished visual system and interactive sections, making key information easy to explore across devices.",
 		technologies: [
 			"React",
 			"JavaScript",
 			"Tailwind CSS",
-			"Node JS",
+			"Node.js",
 			"Express",
-			"Mongoss",
+			"MongoDB",
 		],
 		liveUrl: "https://ubrestaurant.vercel.app",
 		githubUrl: "https://github.com/abasiubongesinwo",
@@ -21,8 +23,10 @@ const projects = [
 	},
 	{
 		title: "Abasiubong Todo App",
+		purpose:
+			"A lightweight task manager for organizing and tracking everyday work.",
 		description:
-			"A responsive task management application built to organize daily tasks efficiently with a clean and modern user interface.",
+			"Built a responsive task management application with a clean interface for creating, organizing, and tracking tasks.",
 		technologies: ["React", "JavaScript", "Tailwind CSS"],
 		liveUrl: "https://abasiubong-todo-app.vercel.app/",
 		githubUrl: "https://github.com/abasiubongesinwo/todo-list",
@@ -64,12 +68,12 @@ export default function Projects() {
 				</p>
 
 				<h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
-					Things I've built
+					Selected work
 				</h2>
 
 				<p className="mt-4 max-w-2xl text-slate-400">
-					A selection of projects I've built while learning and practicing web
-					development.
+					A selection of web experiences and applications, with the purpose and
+					implementation behind each build.
 				</p>
 			</div>
 
@@ -78,7 +82,7 @@ export default function Projects() {
 				initial="hidden"
 				whileInView="visible"
 				viewport={{ once: true, amount: 0.1 }}
-				className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+				className="grid gap-6 md:grid-cols-2">
 				{projects.map((project, index) => (
 					<motion.article
 						key={project.title}
@@ -92,7 +96,7 @@ export default function Projects() {
 								{project.imageUrl ?
 									<img
 										src={project.imageUrl}
-										alt={project.title}
+										alt={`${project.title} website preview`}
 										className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
 									/>
 								:	<div className="flex h-full w-full items-center justify-center text-xs text-slate-600">
@@ -117,7 +121,11 @@ export default function Projects() {
 								<span className="text-sm text-slate-600">0{index + 1}</span>
 							</div>
 
-							<p className="mt-5 leading-7 text-slate-400 text-justify">
+							<p className="mt-5 text-sm font-medium uppercase tracking-[0.12em] text-sky-300/80">
+								Purpose
+							</p>
+							<p className="mt-2 leading-7 text-slate-400">{project.purpose}</p>
+							<p className="mt-4 leading-7 text-slate-300">
 								{project.description}
 							</p>
 
@@ -136,7 +144,7 @@ export default function Projects() {
 									<a
 										href={project.liveUrl}
 										target="_blank"
-										rel="noreferrer"
+										rel="noopener noreferrer"
 										className="inline-flex items-center gap-2 rounded-full bg-sky-400 px-5 py-3 text-sm font-semibold text-slate-950 transition-all duration-300 hover:bg-sky-300">
 										Live Demo
 										<ExternalLink size={16} />
@@ -146,7 +154,7 @@ export default function Projects() {
 								<a
 									href={project.githubUrl}
 									target="_blank"
-									rel="noreferrer"
+									rel="noopener noreferrer"
 									className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:border-sky-400/40 hover:bg-white/[0.06]">
 									GitHub
 									<Github size={16} />

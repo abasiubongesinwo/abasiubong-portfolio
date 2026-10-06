@@ -88,19 +88,19 @@ export default function Hero() {
 					}}
 					className="max-w-4xl">
 					{/* Label */}
-					<motion.p
+					{/* <motion.p
 						variants={fadeUp}
-						className="mt-7 text-sm font-medium uppercase tracking-[0.3em] text-sky-400">
-						Frontend Developer
-					</motion.p>
+						className="mt-6 text-sm font-medium uppercase tracking-[0.3em] text-sky-400">
+						Abasiubong Esinwo · Fullstack Engineer
+					</motion.p> */}
 
 					{/* Main heading */}
 					<motion.h1
 						variants={fadeUp}
 						className="mt-5 max-w-4xl text-5xl font-bold leading-[0.94] tracking-[-0.055em] text-white sm:text-6xl lg:text-7xl xl:text-[5.5rem]">
-						I build digital
+						I build modern
 						<span className="block bg-gradient-to-r from-sky-300 via-cyan-300 to-blue-500 bg-clip-text text-transparent">
-							experiences that matter.
+							web products end to end.
 						</span>
 					</motion.h1>
 
@@ -108,9 +108,9 @@ export default function Hero() {
 					<motion.p
 						variants={fadeUp}
 						className="mt-7 max-w-2xl text-base leading-8 text-slate-400 sm:text-lg">
-						I design and build responsive websites, modern web applications, and
-						polished interfaces for businesses, startups, and people with ideas
-						worth bringing to life.
+						I build responsive web applications and digital experiences across
+						the frontend and backend, from polished interfaces and APIs to
+						data-backed features for businesses, startups, and product teams.
 					</motion.p>
 
 					{/* CTAs */}
@@ -135,9 +135,10 @@ export default function Hero() {
 					<motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-2">
 						{[
 							"React",
-							"TypeScript",
+							"Node.js · Express",
+							"MongoDB",
 							"Responsive Design",
-							"Web Applications",
+							"API-driven Apps",
 						].map((skill) => (
 							<span
 								key={skill}
@@ -232,7 +233,7 @@ export default function Hero() {
 							{/* Name */}
 							<div className="absolute bottom-7 left-7">
 								<p className="text-[10px] font-medium uppercase tracking-[0.25em] text-sky-300">
-									Frontend Developer
+									Fullstack Engineer
 								</p>
 
 								<p className="mt-1 text-lg font-semibold text-white">

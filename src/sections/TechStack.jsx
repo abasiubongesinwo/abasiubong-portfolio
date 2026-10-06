@@ -1,54 +1,43 @@
 import { motion } from "framer-motion";
 import {
-	SiHtml5,
-	SiJavascript,
-	SiReact,
-	SiTailwindcss,
-	SiNodedotjs,
+	SiExpress,
 	SiGit,
 	SiGithub,
+	SiHtml5,
+	SiJavascript,
+	SiMongodb,
+	SiNodedotjs,
+	SiReact,
+	SiTailwindcss,
 } from "react-icons/si";
 
-const technologies = [
+const technologyGroups = [
 	{
-		name: "HTML5",
-		icon: SiHtml5,
-		description: "Building structured web pages",
+		name: "Frontend",
+		items: [
+			{ name: "HTML5", icon: SiHtml5 },
+			{ name: "CSS3" },
+			{ name: "JavaScript", icon: SiJavascript },
+			{ name: "React", icon: SiReact },
+			{ name: "Tailwind CSS", icon: SiTailwindcss },
+		],
 	},
 	{
-		name: "CSS3",
-		icon: null,
-		description: "Styling and responsive layouts",
+		name: "Backend & data",
+		items: [
+			{ name: "Node.js", icon: SiNodedotjs },
+			{ name: "Express", icon: SiExpress },
+			{ name: "MongoDB", icon: SiMongodb },
+		],
 	},
 	{
-		name: "JavaScript",
-		icon: SiJavascript,
-		description: "Adding logic and interactivity",
-	},
-	{
-		name: "React",
-		icon: SiReact,
-		description: "Building component-based interfaces",
-	},
-	{
-		name: "Tailwind CSS",
-		icon: SiTailwindcss,
-		description: "Creating responsive UI efficiently",
-	},
-	{
-		name: "Node.js",
-		icon: SiNodedotjs,
-		description: "Learning backend development",
-	},
-	{
-		name: "Git",
-		icon: SiGit,
-		description: "Tracking and managing code",
-	},
-	{
-		name: "GitHub",
-		icon: SiGithub,
-		description: "Hosting and managing code",
+		name: "Tools & platforms",
+		items: [
+			{ name: "Git", icon: SiGit },
+			{ name: "GitHub", icon: SiGithub },
+			{ name: "Vercel" },
+			{ name: "Vite" },
+		],
 	},
 ];
 
@@ -61,36 +50,21 @@ const container = {
 	},
 };
 
-const card = {
-	hidden: {
-		opacity: 0,
-		y: 20,
-	},
-	visible: {
-		opacity: 1,
-		y: 0,
-		transition: {
-			duration: 0.5,
-			ease: "easeOut",
-		},
-	},
-};
-
 export default function TechStack() {
 	return (
-		<section id="skills" className="py-24">
+		<section id="stack" className="py-24">
 			<div className="mb-12">
 				<p className="mb-3 text-sm font-medium uppercase tracking-[0.3em] text-sky-400">
 					Tech Stack
 				</p>
 
 				<h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
-					Technologies I'm learning
+					Tools behind the work
 				</h2>
 
 				<p className="mt-4 max-w-2xl text-slate-400">
-					These are the technologies I currently use and practice while building
-					personal projects and improving my web development skills.
+					A practical stack for building responsive interfaces, API-backed
+					applications, and deployable web experiences.
 				</p>
 			</div>
 
@@ -99,39 +73,28 @@ export default function TechStack() {
 				initial="hidden"
 				whileInView="visible"
 				viewport={{ once: true, amount: 0.15 }}
-				className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-				{technologies.map((tech) => {
-					const Icon = tech.icon;
-
-					return (
-						<motion.div
-							key={tech.name}
-							variants={card}
-							className="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-sky-400/30 hover:bg-white/[0.05]">
-							<div className="flex items-center justify-between">
-								{Icon ?
-									<Icon
-										size={30}
-										className="text-slate-300 transition-colors duration-300 group-hover:text-sky-400"
-									/>
-								:	<span className="text-lg font-bold text-slate-300 transition-colors duration-300 group-hover:text-sky-400">
-										CSS
-									</span>
-								}
-
-								<span className="text-xs text-slate-600">
-									0{technologies.indexOf(tech) + 1}
+				className="grid gap-5 lg:grid-cols-3">
+				{technologyGroups.map((group) => (
+					<motion.article
+						key={group.name}
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: true, amount: 0.2 }}
+						transition={{ duration: 0.5, ease: "easeOut" }}
+						className="rounded-3xl border border-white/10 bg-white/[0.03] p-6">
+						<h3 className="text-lg font-semibold text-white">{group.name}</h3>
+						<div className="mt-5 flex flex-wrap gap-2.5">
+							{group.items.map(({ name, icon: Icon }) => (
+								<span
+									key={name}
+									className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-slate-950/50 px-3 py-2 text-sm text-slate-300 transition-colors hover:border-sky-400/30 hover:text-sky-200">
+									{Icon && <Icon aria-hidden="true" size={15} />}
+									{name}
 								</span>
-							</div>
-
-							<h3 className="mt-6 font-semibold text-white">{tech.name}</h3>
-
-							<p className="mt-2 text-sm leading-6 text-slate-500">
-								{tech.description}
-							</p>
-						</motion.div>
-					);
-				})}
+							))}
+						</div>
+					</motion.article>
+				))}
 			</motion.div>
 		</section>
 	);

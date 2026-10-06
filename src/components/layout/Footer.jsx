@@ -1,4 +1,4 @@
-import { Github, Mail, ArrowUp } from "lucide-react";
+import { Github, Mail, ArrowUp, MessageCircle } from "lucide-react";
 
 export default function Footer() {
 	const year = new Date().getFullYear();
@@ -19,11 +19,16 @@ export default function Footer() {
 							onClick={scrollToHome}
 							className="flex items-center"
 							aria-label="Go to home">
-							<img src="/ablogo.png" alt="AE Logo" className="h-10 w-10 object-contain" />
+							<img
+								src="/ablogo.png"
+								alt="AE Logo"
+								className="h-10 w-10 object-contain"
+							/>
 						</button>
 
 						<p className="mt-2 max-w-sm text-sm leading-6 text-slate-500">
-							Building polished, high-performing digital experiences for businesses, startups, and product teams.
+							Fullstack Engineer building modern web applications and digital
+							experiences.
 						</p>
 					</div>
 
@@ -42,6 +47,15 @@ export default function Footer() {
 							aria-label="Email"
 							className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-700 bg-slate-900/70 text-slate-400 transition-all duration-300 hover:border-sky-400/40 hover:text-sky-400">
 							<Mail size={18} />
+						</a>
+
+						<a
+							href="https://wa.me/2347045559667"
+							target="_blank"
+							rel="noopener noreferrer"
+							aria-label="WhatsApp"
+							className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-700 bg-slate-900/70 text-slate-400 transition-all duration-300 hover:border-sky-400/40 hover:text-sky-400">
+							<MessageCircle size={18} />
 						</a>
 
 						<button

@@ -22,10 +22,16 @@ const services = [
 		icon: Rocket,
 	},
 	{
-		title: "Web Applications",
+		title: "Fullstack Web Applications",
 		description:
-			"Interactive, scalable frontend experiences built with clean architecture and real-world product thinking.",
+			"Interactive web applications that connect responsive React interfaces with Node.js, Express, APIs, and MongoDB-backed features.",
 		icon: LayoutTemplate,
+	},
+	{
+		title: "API & Backend Integration",
+		description:
+			"Connect web interfaces to backend services and data with clear API integration and maintainable application structure.",
+		icon: BriefcaseBusiness,
 	},
 	{
 		title: "Frontend Development",
@@ -98,7 +104,9 @@ export default function Services() {
 								<Icon size={22} />
 							</div>
 							<h3 className="text-2xl font-semibold text-white">{title}</h3>
-							<p className="mt-4 text-base leading-7 text-slate-400">{description}</p>
+							<p className="mt-4 text-base leading-7 text-slate-400">
+								{description}
+							</p>
 						</div>
 					</motion.article>
 				))}
